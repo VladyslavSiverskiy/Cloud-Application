@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="559.0" prefWidth="975.0" style="-fx-background-color: transparent; -fx-background-radius: 50px; -fx-border-radius: 50px;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainPageController">
+   <children>
+      <AnchorPane layoutX="-23.0" layoutY="63.0" prefHeight="455.0" prefWidth="241.0" style="-fx-background-color: #399cff; -fx-border-radius: 20px; -fx-background-radius: 20px;" AnchorPane.leftAnchor="-23.0">
+         <children>
+            <AnchorPane layoutX="53.0" layoutY="38.0" prefHeight="40.0" prefWidth="42.0" style="-fx-background-image: url(/images/avatar.png); -fx-background-size: cover; -fx-background-color: transparent;" />
+            <Label fx:id="userNameLabel" layoutX="106.0" layoutY="43.0" prefHeight="30.0" prefWidth="122.0" text="Username12" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="21.0" layoutY="106.0" prefHeight="55.0" prefWidth="221.0" style="-fx-background-color: #0073cf;">
+               <children>
+                  <Label layoutX="23.0" layoutY="13.0" text="My files" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="21.0" layoutY="161.0" onMouseClicked="#openStats" prefHeight="55.0" prefWidth="221.0" style="-fx-background-color: #399cea;">
+               <children>
+                  <Label layoutX="23.0" layoutY="13.0" text="Storage statistics" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="21.0" layoutY="216.0" prefHeight="55.0" prefWidth="221.0" style="-fx-background-color: #399cfa;">
+               <children>
+                  <Label layoutX="23.0" layoutY="13.0" text="Account settings" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <Label layoutX="66.0" layoutY="18.0" text="Cloud storage" textFill="#82d0ff" AnchorPane.leftAnchor="66.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="24.0" layoutY="20.0" prefHeight="25.0" prefWidth="29.0" style="-fx-background-image: url(/images/icon.png); -fx-background-size: cover;" AnchorPane.leftAnchor="24.0" />
+      <TableView fx:id="filesTable" layoutX="263.0" layoutY="63.0" prefHeight="455.0" prefWidth="456.0">
+        <columns>
+          <TableColumn fx:id="files" prefWidth="160.0" text="File name" />
+          <TableColumn fx:id="size" prefWidth="158.5" text="FIle size" />
+            <TableColumn fx:id="date" prefWidth="136.5" text="Was added" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="744.0" layoutY="63.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 10px; -fx-border-color: lightgrey; -fx-border-radius: 10px;">
+         <children>
+            <Button layoutX="7.0" layoutY="63.0" mnemonicParsing="false" onAction="#downloadFile" prefHeight="55.0" prefWidth="187.0" style="-fx-background-color: #21f07f;" text="Download" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button layoutX="7.0" layoutY="131.0" mnemonicParsing="false" onAction="#deleteBtn" prefHeight="55.0" prefWidth="187.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE">
+
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Label layoutX="14.0" layoutY="14.0" text="You choose: ">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="fileChoose" layoutX="14.0" layoutY="35.0" text="" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="744.0" layoutY="280.0" prefHeight="142.0" prefWidth="200.0" style="-fx-background-radius: 10px; -fx-border-color: lightgrey; -fx-border-radius: 10px;">
+         <children>
+            <Button layoutX="7.0" layoutY="14.0" mnemonicParsing="false" onAction="#choseFile" prefHeight="55.0" prefWidth="187.0" style="-fx-background-color: #399cff;" text="Upload" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Label layoutX="36.0" layoutY="23.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Button layoutX="7.0" layoutY="76.0" mnemonicParsing="false" onAction="#showModalFolderName" prefHeight="55.0" prefWidth="187.0" style="-fx-background-color: #F0E68C;" text="Create folder" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="306.0" layoutY="36.0" prefHeight="22.0" prefWidth="359.0" style="-fx-background-radius: 10px; -fx-border-color: lightgrey; -fx-border-radius: 10px;">
+         <children>
+            <Label fx:id="pathToFolder" layoutX="8.0" layoutY="3.0" prefHeight="19.0" prefWidth="403.0" text="">
+               <padding>
+                  <Insets top="2.0" />
+               </padding>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="closeMain" layoutX="906.0" layoutY="15.0" mnemonicParsing="false" onAction="#closeApp" prefHeight="25.0" prefWidth="55.0" styleClass="close_btn" text="X">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Button>
+      <Button layoutX="263.0" layoutY="38.0" mnemonicParsing="false" onAction="#moveBack" style="-fx-rotate: 180;" text="➤">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </Button>
+   </children>
+</AnchorPane>

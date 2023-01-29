@@ -1,0 +1,38 @@
+.login_menu{
+    -fx-background-color: #F6F3F2;
+}
+
+.close_btn{
+    -fx-background-color: Transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-border-style: none;
+    -fx-font-size: 25px;
+    -fx-font-family: "Arial Black";
+}
+
+.close_btn:hover{
+    -fx-text-fill: #525050;
+}
+
+#sign_in_btn{
+    -fx-background-color: #399cff;
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 1em;
+}
+
+#sign_in_btn:hover{
+    -fx-background-color: white;
+    -fx-text-fill: #399cff;
+    -fx-border-radius: 50%;
+    -fx-border-width: 2px;
+    -fx-font-size: 21px;
+    -fx-border-color: #399cff;
+}
+
+.hyperlink {
+    -fx-border-color: transparent;
+}
+
+

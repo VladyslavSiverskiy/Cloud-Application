@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="558.0" prefWidth="973.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MemoryController">
+    <children>
+        <AnchorPane layoutX="-23.0" layoutY="63.0" prefHeight="455.0" prefWidth="241.0" style="-fx-background-color: #399cff; -fx-border-radius: 20px; -fx-background-radius: 20px;" AnchorPane.leftAnchor="-23.0">
+            <children>
+                <AnchorPane layoutX="53.0" layoutY="38.0" prefHeight="40.0" prefWidth="42.0" style="-fx-background-image: url(/images/avatar.png); -fx-background-size: cover; -fx-background-color: transparent;" />
+                <Label fx:id="userName" layoutX="106.0" layoutY="43.0" prefHeight="30.0" prefWidth="116.0" text="Username" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="19.0" />
+                    </font>
+                </Label>
+                <AnchorPane layoutX="21.0" layoutY="106.0" onMouseClicked="#openMain" prefHeight="55.0" prefWidth="221.0" style="-fx-background-color: #399cea;">
+                    <children>
+                        <Label layoutX="23.0" layoutY="13.0" text="My files" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="21.0" layoutY="161.0" prefHeight="55.0" prefWidth="221.0" style="-fx-background-color: #0073cf;">
+                    <children>
+                        <Label layoutX="23.0" layoutY="13.0" text="Storage statistics" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="21.0" layoutY="216.0" prefHeight="55.0" prefWidth="221.0" style="-fx-background-color: #399cfa;">
+                    <children>
+                        <Label layoutX="23.0" layoutY="13.0" text="Account settings" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </children></AnchorPane>
+        <Label layoutX="66.0" layoutY="18.0" text="Cloud storage" textFill="#82d0ff" AnchorPane.leftAnchor="66.0">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="24.0" layoutY="20.0" prefHeight="25.0" prefWidth="29.0" style="-fx-background-image: url(/images/icon.png); -fx-background-size: cover;" AnchorPane.leftAnchor="24.0" />
+        <Button fx:id="closeMain" layoutX="906.0" layoutY="15.0" mnemonicParsing="false" onAction="#closeApp" prefHeight="25.0" prefWidth="55.0" styleClass="close_btn" text="X">
+            <font>
+                <Font name="System Bold" size="25.0" />
+            </font>
+            <padding>
+                <Insets left="10.0" />
+            </padding>
+        </Button>
+      <AnchorPane layoutX="252.0" layoutY="63.0" prefHeight="196.0" prefWidth="649.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-background-radius: 20px;">
+         <children>
+            <Label layoutX="56.0" layoutY="33.0" text="Your storage:">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="memoryBar" layoutX="56.0" layoutY="89.0" prefHeight="36.0" prefWidth="544.0" progress="0.0" />
+            <Label layoutX="56.0" layoutY="132.0" text="0Mb">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="maxSpace" layoutX="581.0" layoutY="132.0" text="Mb">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="252.0" layoutY="279.0" prefHeight="232.0" prefWidth="649.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-background-radius: 20px;">
+         <children>
+            <Label layoutX="54.0" layoutY="28.0" text="Memory info:">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="54.0" layoutY="86.0" text="You have used - ">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="kbytesUsed" layoutX="221.0" layoutY="86.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+    </children>
+
+</AnchorPane>

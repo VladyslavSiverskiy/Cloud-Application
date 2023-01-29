@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="439.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RegistrationPageController">
+   <children>
+      <AnchorPane prefHeight="494.0" prefWidth="351.0" styleClass="login_menu">
+         <children>
+            <Label layoutX="106.0" layoutY="76.0" prefHeight="40.0" prefWidth="126.0" text="Sign up">
+               <font>
+                  <Font name="Tahoma Bold" size="32.0" />
+               </font>
+            </Label>
+            <Hyperlink layoutX="169.0" layoutY="408.0" onAction="#backToSignInPage" text="sign in" />
+            <Label layoutX="38.0" layoutY="123.0" text="Enter your email:">
+               <font>
+                  <Font name="Segoe UI" size="17.0" />
+               </font></Label>
+            <TextField fx:id="emailField" layoutX="35.0" layoutY="153.0" prefHeight="25.0" prefWidth="281.0" />
+            <PasswordField fx:id="createPasswordField" layoutX="35.0" layoutY="222.0" prefHeight="25.0" prefWidth="281.0" />
+            <PasswordField fx:id="repeatPasswordField" layoutX="35.0" layoutY="294.0" prefHeight="25.0" prefWidth="281.0" />
+            <Label layoutX="95.0" layoutY="411.0" text="Come back to" />
+            <Label layoutX="212.0" layoutY="411.0" text="page" />
+            <Button id="sign_in_btn" layoutX="110.0" layoutY="356.0" mnemonicParsing="false" onAction="#registerUser" prefHeight="40.0" prefWidth="113.0" text="Sign up" />
+            <Label layoutX="37.0" layoutY="193.0" text="Create password:">
+               <font>
+                  <Font name="Segoe UI" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="265.0" text="Repeat password:">
+               <font>
+                  <Font name="Segoe UI" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="103.0" layoutY="23.0" text="Cloud storage app" textFill="#82d0ff" AnchorPane.topAnchor="15.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="63.0" layoutY="23.0" prefHeight="25.0" prefWidth="29.0" style="-fx-background-image: url(/images/icon.png); -fx-background-size: cover;" AnchorPane.topAnchor="15.0" />
+            <Label fx:id="emailWarning" layoutX="37.0" layoutY="178.0" textFill="RED" />
+            <Label fx:id="createPasswordWarning" layoutX="35.0" layoutY="247.0" textFill="RED" />
+            <Label fx:id="repeatPasswordWarning" layoutX="35.0" layoutY="319.0" textFill="RED" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="350.0" prefHeight="494.0" prefWidth="588.0" style="-fx-background-image: url(/images/login.jpg); -fx-background-size: cover; ">
+         <children>
+            <Button fx:id="close_reg" layoutX="546.0" mnemonicParsing="false" onAction="#closeReg" styleClass="close_btn" text="x" textFill="#000000bd">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

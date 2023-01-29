@@ -1,0 +1,11 @@
+.close_btn{
+    -fx-background-color: Transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-border-style: none;
+    -fx-font-size: 25px;
+    -fx-font-family: "Arial Black";
+}
+
+.close_btn:hover{
+    -fx-text-fill: #525050;
+}
